@@ -28,11 +28,11 @@ export default function Home() {
   const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: true }));
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       {/* Background Section */}
       <div className="relative w-full min-h-[600px] bg-center bg-cover bg-[url('/bg.png')]">
         {/* Blue Blur Overlay */}
-        <div className="absolute inset-0 bg-[#2f407c] bg-opacity-40 backdrop-blur-xs"></div>
+        <div className="absolute inset-0 bg-[#293b7f] bg-opacity-40 backdrop-blur-[2px]"></div>
 
         {/* Navbar */}
         <nav className="relative z-50 bg-white text-black rounded-full p-4 shadow-md fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-7xl">
@@ -179,7 +179,7 @@ export default function Home() {
       </div>
 
       {/* How it works */}
-      <section className="py-16 bg-[#e1e0f8] w-full h-[600px] mt-10 flex justify-between px-10">
+      <section className="py-16 bg-[#0558E226]  w-full h-[600px] mt-10 flex justify-between px-10">
         {/* Left Section */}
         <div className="flex-1 space-y-6 p-6 justify-center flex flex-col">
           <h1 className="text-3xl font-bold text-black mb-4">How it works</h1>
@@ -740,11 +740,11 @@ export default function Home() {
 
       {/* footer  section */}
 
-      <section className="flex flex-col bg-gray-50 py-10 px-5">
+      <section className="flex flex-col bg-gray-50 py-10 px-5 border border-t-2 rounded-t-[6rem]">
         {/* First Section: Join Envialink */}
         <div className="flex flex-col md:flex-row justify-between items-center md:space-x-10  space-y-8 md:space-y-0 mb-10 mx-auto container">
           <div className="text-center md:text-left max-w-lg">
-            <h1 className="text-3xl font-bold text-[#2048D6] mb-4">
+            <h1 className="text-3xl font-bold text-black mb-4">
               Join Envialink Today
             </h1>
             <p className="text-gray-700 mb-6">
