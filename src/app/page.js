@@ -35,7 +35,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#293b7f] bg-opacity-40 backdrop-blur-[2px]"></div>
 
         {/* Navbar */}
-        <nav className="relative z-50 bg-white text-black rounded-full p-4 shadow-md fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-7xl">
+        <nav className="relative z-50 bg-white text-black rounded-sm md:rounded-full p-4 shadow-md fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-7xl">
           <div className="container mx-auto flex justify-between items-center">
             {/* Logo */}
             <div className="text-xl font-semibold text-[#2048D6]">
@@ -122,7 +122,11 @@ export default function Home() {
 
           {/* Mobile Menu */}
           {isNavOpen && (
-            <div className="md:hidden mt-4">
+            <div
+              className={`md:hidden mt-4 transition-all duration-1000 ease-in-out transform ${
+                isNavOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
+            >
               <ul className="space-y-4 text-center">
                 <li>
                   <Link href="/" className="block text-lg hover:text-gray-300">
