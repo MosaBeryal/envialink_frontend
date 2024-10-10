@@ -123,42 +123,35 @@ export default function Home() {
           {/* Mobile Menu */}
           {isNavOpen && (
             <div
-              className={`md:hidden mt-4 transition-all duration-1000 ease-in-out transform ${
-                isNavOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
-              }`}
-            >
-              <ul className="space-y-4 text-center">
-                <li>
-                  <Link href="/" className="block text-lg hover:text-gray-300">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    className="block text-lg hover:text-gray-300"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services"
-                    className="block text-lg hover:text-gray-300"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="block text-lg hover:text-gray-300"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
+    className={`${
+      isNavOpen
+        ? 'opacity-100 max-h-screen scale-100'
+        : 'opacity-0 max-h-0 scale-95'
+    } transition-all duration-500 ease-in-out overflow-hidden transform`}
+  >
+    <ul className="space-y-4 text-center mt-4">
+      <li>
+        <Link href="/" className="block text-lg hover:text-gray-300">
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link href="/about" className="block text-lg hover:text-gray-300">
+          About
+        </Link>
+      </li>
+      <li>
+        <Link href="/services" className="block text-lg hover:text-gray-300">
+          Services
+        </Link>
+      </li>
+      <li>
+        <Link href="/contact" className="block text-lg hover:text-gray-300">
+          Contact
+        </Link>
+      </li>
+    </ul>
+  </div>
           )}
         </nav>
 
