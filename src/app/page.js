@@ -159,16 +159,16 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center text-white p-8 h-[500px]">
-          <h1 className="text-4xl md:text-6xl font-bold drop-shadow-lg mb-4">
+        <div className="relative z-10 flex flex-col items-center justify-center text-center text-white p-4 h-auto min-h-[500px] lg:h-[600px]">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg mb-4">
             International Parcel Forwarding Services
           </h1>
-          <p className="text-lg max-w-2xl mx-auto mb-6">
+          <p className="text-base md:text-lg lg:text-xl max-w-2xl mx-auto mb-6">
             Buy Products in the USA, China, and Europe (including popular
             countries like the UK, Austria, Australia, Germany, France), We'll
             Ship Them to Mozambique, Malawi, and Zimbabwe.
           </p>
-          <Button className="bg-white text-[#2048D6] rounded-full px-6 py-7 flex items-center space-x-4 w-40">
+          <Button className="bg-white text-[#2048D6] rounded-full px-6 py-3 lg:py-4 flex items-center space-x-4 w-auto lg:w-40">
             <span>Sign In</span>
             <ArrowRight
               size={16}
@@ -179,81 +179,84 @@ export default function Home() {
       </div>
 
       {/* How it works */}
-      <section className="py-16 bg-[#0558E226]  w-full h-[600px] mt-10 flex justify-between px-10">
+      <section className="py-16 bg-[#0558E226] w-full h-auto mt-10 flex flex-col lg:flex-row justify-between px-5 lg:px-10">
         {/* Left Section */}
         <div className="flex-1 space-y-6 p-6 justify-center flex flex-col">
-          <h1 className="text-3xl font-bold text-black mb-4">How it works</h1>
+          <h1 className="text-2xl lg:text-3xl font-bold text-black mb-4">
+            How it works
+          </h1>
 
           {/* Step 1 */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-start lg:items-center space-x-3">
             <span>
               <Check
                 size={20}
                 className="text-white bg-[#2048D6] rounded-full"
               />
             </span>
-            <p className="text-lg">
+            <p className="text-base lg:text-lg">
               Create an Account – Sign up with Envialink to receive your
               shipping addresses in the US, UK, and Europe.
             </p>
           </div>
 
           {/* Step 2 */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-start lg:items-center space-x-3">
             <span>
               <Check
                 size={20}
                 className="text-white bg-[#2048D6] rounded-full"
               />
             </span>
-            <p className="text-lg">
+            <p className="text-base lg:text-lg">
               Shop Online – Purchase items from online stores and ship them to
               your Envialink addresses.
             </p>
           </div>
 
           {/* Step 3 */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-start lg:items-center space-x-3">
             <span>
               <Check
                 size={20}
                 className="text-white bg-[#2048D6] rounded-full"
               />
             </span>
-            <p className="text-lg">
+            <p className="text-base lg:text-lg">
               Parcel Forwarding – Once your items arrive at our warehouse, we’ll
               send them to your door.
             </p>
           </div>
 
           {/* Step 4 */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-start lg:items-center space-x-3">
             <span>
               <Check
                 size={20}
                 className="text-white bg-[#2048D6] rounded-full"
               />
             </span>
-            <p className="text-lg">
+            <p className="text-base lg:text-lg">
               Consolidate Orders – Save on shipping by consolidating multiple
               orders into one package.
             </p>
           </div>
 
           {/* Step 5 */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-start lg:items-center space-x-3">
             <span>
               <Check
                 size={20}
                 className="text-white bg-[#2048D6] rounded-full"
               />
             </span>
-            <p className="text-lg">
+            <p className="text-base lg:text-lg">
               Track Your Orders – Stay updated with real-time tracking until
               your parcel arrives.
             </p>
           </div>
-          {/* button */}
+
+          {/* Button */}
           <div className="flex items-center space-x-3">
             <Button className="text-white bg-[#2048D6] rounded-full px-6 py-3 flex justify-between items-center space-x-4 h-14 w-52">
               <span>Learn More</span>
@@ -266,7 +269,7 @@ export default function Home() {
         </div>
 
         {/* Right Section - Images */}
-        <div className="flex space-x-5 flex-1 justify-center">
+        <div className="flex-1 flex flex-wrap justify-center mt-10 lg:mt-0 space-x-5">
           <div>
             <Image
               src="/signup.png"
@@ -282,7 +285,7 @@ export default function Home() {
               alt="Process image 2"
             />
           </div>
-          <div className="mt-5">
+          <div className="mt-5 lg:mt-0">
             <Image
               src="/mobile.png"
               width={230}
@@ -472,7 +475,7 @@ export default function Home() {
             alt="Boohoo"
             className="rounded-lg mx-auto lg:mx-0"
           />
-          <div className="absolute bottom-4 left-1/2 lg:left-32 transform -translate-x-1/2 p-3 bg-white rounded-tr-xl">
+          <div className="absolute bottom-4 left-1/2 lg:left-32 transform -translate-x-1/2 p-3 bg-none  md:bg-white rounded-tr-xl ">
             <Button className="text-white bg-[#2048D6] rounded-full px-6 py-3 flex justify-between items-center space-x-4 h-14 w-52">
               <span>Learn More</span>
               <ArrowRight
@@ -555,28 +558,38 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      {/* buy for me section */}
       <section className="flex justify-center items-center py-12">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-800 mb-6">Buy For Me</h1>
-          <Image src="/buy.png" width={700} height={400} alt="Tesco" />
+        <div className="text-center w-full px-4 md:px-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-6">
+            Buy For Me
+          </h1>
+          <div className="flex justify-center">
+            <Image
+              src="/buy.png"
+              width={700}
+              height={400}
+              alt="Tesco"
+              className="w-full max-w-md md:max-w-lg lg:max-w-2xl h-auto"
+            />
+          </div>
         </div>
       </section>
 
       {/* slider */}
       <section className="w-full flex flex-col items-center py-16 bg-[#0558E226]">
-        <h1 className="text-3xl font-bold text-black mb-8">
+        <h1 className="text-2xl md:text-3xl font-bold text-black mb-8 text-center">
           What Our Clients Say About Us
         </h1>
         <Carousel
           plugins={[plugin.current]}
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
-          className="w-full max-w-6xl"
+          className="w-full max-w-6xl px-4 sm:px-8"
         >
           <CarouselContent className="flex space-x-6">
             {/* Card 1 */}
-            <CarouselItem className="flex-shrink-0 w-full md:w-1/4">
+            <CarouselItem className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3">
               <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 duration-500">
                 <div className="flex justify-center mt-6">
                   <Image
@@ -588,11 +601,11 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-center text-gray-800">
+                  <h3 className="text-lg md:text-xl font-semibold text-center text-gray-800">
                     Tinashe Muzvineyi
                   </h3>
                   <p className="text-center text-gray-500 text-sm">Zimbabwe</p>
-                  <p className="text-gray-600 mt-4 text-center text-base leading-relaxed">
+                  <p className="text-gray-600 mt-4 text-center text-sm md:text-base leading-relaxed">
                     “I’m so glad to know about Envialink! Buying my phones
                     directly from Apple in the USA used to be expensive, but now
                     shipping is only $50 to Zimbabwe. No more hustles to go
@@ -603,7 +616,7 @@ export default function Home() {
             </CarouselItem>
 
             {/* Card 2 */}
-            <CarouselItem className="flex-shrink-0 w-full md:w-1/4">
+            <CarouselItem className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3">
               <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 duration-500">
                 <div className="flex justify-center mt-6">
                   <Image
@@ -615,13 +628,13 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-center text-gray-800">
+                  <h3 className="text-lg md:text-xl font-semibold text-center text-gray-800">
                     Domingos João Mondlane
                   </h3>
                   <p className="text-center text-gray-500 text-sm">
                     Mozambique
                   </p>
-                  <p className="text-gray-600 mt-4 text-center text-base leading-relaxed">
+                  <p className="text-gray-600 mt-4 text-center text-sm md:text-base leading-relaxed">
                     “Sempre tive dificuldade em comprar na Amazon e eBay na
                     América, já que não enviam para Moçambique. Fiquei muito
                     feliz quando descobri a Envialink agora posso comprar
@@ -632,7 +645,7 @@ export default function Home() {
             </CarouselItem>
 
             {/* Card 3 */}
-            <CarouselItem className="flex-shrink-0 w-full md:w-1/4">
+            <CarouselItem className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3">
               <div className="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 duration-500">
                 <div className="flex justify-center mt-6">
                   <Image
@@ -644,11 +657,11 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-center text-gray-800">
+                  <h3 className="text-lg md:text-xl font-semibold text-center text-gray-800">
                     Michael Nkwazi Dulani
                   </h3>
                   <p className="text-center text-gray-500 text-sm">Malawi</p>
-                  <p className="text-gray-600 mt-4 text-center text-base leading-relaxed">
+                  <p className="text-gray-600 mt-4 text-center text-sm md:text-base leading-relaxed">
                     “I love buying products from the USA and UK, but my bank
                     often wouldn’t accept my purchases. With Envialink, I can
                     shop anywhere online using Airtel Money and Mpamba, and the
@@ -658,7 +671,9 @@ export default function Home() {
               </div>
             </CarouselItem>
           </CarouselContent>
-          <div className="flex justify-center mt-8 space-x-2">
+
+          {/* Carousel Navigation */}
+          <div className="flex justify-center mt-8 space-x-2 hidden md:flex">
             <CarouselPrevious className="bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700 transition duration-300" />
             <CarouselNext className="bg-blue-500 p-2 rounded-full text-white hover:bg-blue-700 transition duration-300" />
           </div>
@@ -667,8 +682,8 @@ export default function Home() {
 
       {/* frequently asked questions */}
       <section className="py-10 px-5 bg-gray-50">
-        <div className="text-center mb-8">
-          <h1 className="font-semibold text-3xl text-gray-800 mb-2 font-inter">
+        <div className="text-center mb-10">
+          <h1 className="font-semibold text-3xl text-gray-800 mb-4 font-inter">
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-500">
@@ -680,55 +695,55 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mx-auto container">
+        <div className="container mx-auto">
           <Accordion type="single" collapsible>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-xl font-medium">
+            <AccordionItem value="item-1">
+              <AccordionTrigger className="text-xl font-medium text-gray-800 hover:text-blue-600 transition-colors text-start">
                 What is Envialink?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700">
+              <AccordionContent className="text-gray-700 mt-2">
                 Envialink provides international parcel forwarding services from
                 the USA, UK, and China to Africa, helping customers shop from
                 international stores and ship their items easily.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-xl font-medium">
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-xl font-medium text-gray-800 hover:text-blue-600 transition-colors text-start">
                 How does Envialink help save money?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700">
+              <AccordionContent className="text-gray-700 mt-2">
                 Envialink offers services such as no USA sales tax, free 30-day
                 storage, and no membership fees, making international shipping
                 more affordable.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4">
-              <AccordionTrigger className="text-xl font-medium">
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-xl font-medium text-gray-800 hover:text-blue-600 transition-colors text-start">
                 How do I track my shipment?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700">
+              <AccordionContent className="text-gray-700 mt-2">
                 After your package is shipped, you can track its status using
                 the tracking number provided in your dashboard or via email.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5">
-              <AccordionTrigger className="text-xl font-medium">
+            <AccordionItem value="item-4">
+              <AccordionTrigger className="text-xl font-medium text-gray-800 hover:text-blue-600 transition-colors text-start">
                 What payment methods are accepted?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700">
+              <AccordionContent className="text-gray-700 mt-2">
                 Envialink accepts multiple payment methods, including credit
                 cards, PayPal, and local mobile money solutions in Africa.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-6">
-              <AccordionTrigger className="text-xl font-medium">
+            <AccordionItem value="item-5">
+              <AccordionTrigger className="text-xl font-medium text-gray-800 hover:text-blue-600 transition-colors text-start">
                 What happens if my package is delayed?
               </AccordionTrigger>
-              <AccordionContent className="text-gray-700">
+              <AccordionContent className="text-gray-700 mt-2">
                 If your package is delayed, our customer service team will help
                 you resolve the issue and ensure your parcel is delivered as
                 soon as possible.
